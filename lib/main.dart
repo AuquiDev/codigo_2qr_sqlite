@@ -1,4 +1,6 @@
+import 'package:codigo_2qr_sqlite/ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
 
@@ -7,15 +9,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'QR app',
+      home:  HomePage(),
+      theme: ThemeData(
+        textTheme: GoogleFonts.sourceSerifProTextTheme()
       ),
     );
   }
